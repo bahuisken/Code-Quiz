@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Quiz Challenge</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <header class="row bg-secondary">
+        <div class="col-6 px-5 py-2 text-left text-white">View High Scores</div>
+        <div class="col-6  px-5 py-2 text-right text-white">Time: <span id="time">0</span></div>
+    </header>
+    <div class="container">
+        <div id="quiz-intro" class="text-center col-12 m-5">
+            <h1>Coding Quiz Challenge</h1>
+            <p>Try to answer the folowing code quiz questions within the time limit. Keep in mind that incorrect answers
+                will penalize your sore/time by ten seconds</p>
+            <button id="start-quiz-btn" class="btn btn-info m-1">Start Quiz</button>
+        </div>
+        <div id="quiz-container" class="col-12 m-5">
+            <h2 id="quiz-question"></h2>
+            <ul class="m-1" id="quiz-answers">
+                <li><button class="answer btn btn-info m-1" id="answer-a"></button></li>
+                <li><button class="answer btn btn-info m-1" id="answer-b"></button></li>
+                <li><button class="answer btn btn-info m-1" id="answer-c"></button></li>
+                <li><button class="answer btn btn-info m-1" id="answer-d"></button></li>
+            </ul>
+        </div>
+        <div class="col-12 m-5">
+            <h2 id="question-result" class="pl-5">
+            </h2>
+        </div>
+    </div>
+    <script src="assets/js/questions.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

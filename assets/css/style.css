@@ -1,0 +1,7 @@
+#quiz-container, #quiz-container{
+    display: none;
+}
+
+#quiz-answers{
+    list-style: none;
+}

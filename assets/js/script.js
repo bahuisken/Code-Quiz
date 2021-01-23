@@ -60,6 +60,7 @@ function startTimer() {
 
 var answerClick = function () {
     console.log(this.textContent + "\n" + quizQuestions[currentQuestion].correctAnswer);
+    this.blur()
     if (this.textContent === quizQuestions[currentQuestion].correctAnswer) {
         console.log("correct");
         questionResult.textContent = "✅"
@@ -74,7 +75,6 @@ var answerClick = function () {
 
 for (var i = 0; i < quizAnswer.length; i++) {
     quizAnswer[i].addEventListener("click", answerClick, false);
-
 }
 
 function nextQuestion() {
@@ -99,7 +99,10 @@ function gameOver() {
 
 submitInitials.addEventListener("click", function () {
     event.preventDefault();
-
+    if (!initialsText.value) {
+        initialsText.setAttribute("style", "border: 2px solid #FF0000");
+        return
+    }
     // create user object from submission
     var user = {
         user: initialsText.value.trim(),

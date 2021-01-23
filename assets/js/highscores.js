@@ -22,6 +22,7 @@ renderScores()
 
 clearScores.addEventListener("click", function () {
     scoresList.innerHTML = ""
+    this.blur();
     localStorage.clear();
 
 })

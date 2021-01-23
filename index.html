@@ -13,29 +13,41 @@
 
 <body>
     <header class="row bg-secondary">
-        <div class="col-6 px-5 py-2 text-left text-white">View High Scores</div>
+        <div class="col-6 px-5 py-2 text-left text-white"><a href="highscores.html">View High Scores</a></div>
         <div class="col-6  px-5 py-2 text-right text-white">Time: <span id="time">0</span></div>
     </header>
     <div class="container">
-        <div id="quiz-intro" class="text-center col-12 m-5">
-            <h1>Coding Quiz Challenge</h1>
-            <p>Try to answer the folowing code quiz questions within the time limit. Keep in mind that incorrect answers
+        <div id="quiz-intro" class="text-center col-12 mx-auto my-5">
+            <h1 class="text-monospace">Coding Quiz Challenge</h1>
+            <p class="text-monospace lead">Try to answer the folowing code quiz questions within the time limit. Keep in
+                mind that incorrect answers
                 will penalize your sore/time by ten seconds</p>
-            <button id="start-quiz-btn" class="btn btn-info m-1">Start Quiz</button>
+            <button id="start-quiz-btn" class="btn btn-info m-1 text-monospace">Start Quiz</button>
         </div>
-        <div id="quiz-container" class="col-12 m-5">
-            <h2 id="quiz-question"></h2>
+        <div id="quiz-container" class="col-12 mx-auto mt-5">
+            <p id="quiz-question" class="text-monospace text-left"></p>
             <ul class="m-1" id="quiz-answers">
-                <li><button class="answer btn btn-info m-1" id="answer-a"></button></li>
-                <li><button class="answer btn btn-info m-1" id="answer-b"></button></li>
-                <li><button class="answer btn btn-info m-1" id="answer-c"></button></li>
-                <li><button class="answer btn btn-info m-1" id="answer-d"></button></li>
+                <li><button class="answer btn btn-info m-1 text-monospace" id="answer-a"></button></li>
+                <li><button class="answer btn btn-info m-1 text-monospace" id="answer-b"></button></li>
+                <li><button class="answer btn btn-info m-1 text-monospace" id="answer-c"></button></li>
+                <li><button class="answer btn btn-info m-1 text-monospace" id="answer-d"></button></li>
             </ul>
         </div>
-        <div class="col-12 m-5">
-            <h2 id="question-result" class="pl-5">
-            </h2>
+        <div id="quiz-end" class="text-left col-12 mx-auto my-5">
+            <h1 class="text-monospace">All Done!</h1>
+            <p class="text-monospace lead">Your final score is <span id="final-time">0</span></p>
+            <form class="form-inline" action="highscores.html" autocomplete="off">
+                <div class="form-group mx-sm-3 mb-2">
+                    <label for="initials" class="mr-2 ">Enter Your Initials</label>
+                    <input type="initials" class="form-control" id="initials-text" value="">
+                    <button type="submit" id="submit-initials" class="btn btn-info ml-sm-2 mt-2 mt-sm-0">Submit</button>
+            </form>
         </div>
+    </div>
+    <div class="col-12 m-5">
+        <h2 id="question-result" class="pl-5">
+        </h2>
+    </div>
     </div>
     <script src="assets/js/questions.js"></script>
     <script src="assets/js/script.js"></script>

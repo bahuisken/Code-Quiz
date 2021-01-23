@@ -1,52 +1,52 @@
 const quizQuestions = [
   {
-    question: "Commonly used data types DO NOT include:",
+    question: "Which of these is not a logical operator?",
     answers: {
-      a: "1. strings ",
-      b: "2. booleans",
-      c: "3. alerts",
-      d: "4. numbers"
+      a: "1. ! ",
+      b: "2. &",
+      c: "3. &&",
+      d: "4. ||"
     },
-    correctAnswer: "3. alerts"
+    correctAnswer: "2. &"
   },
   {
-    question: "The condition within an if / else statement is enclosed within ______.",
+    question: "Which of the following variable types does not exist in JavaScript?",
     answers: {
-      a: "1. quotes",
-      b: "2. curly brackets",
-      c: "3. parentheses",
-      d: "4. square brackets"
+      a: "1. boolean",
+      b: "2. number",
+      c: "3. object",
+      d: "4. double"
     },
-    correctAnswer: "3. parentheses"
+    correctAnswer: "4. double"
   },
   {
-    question: "Arrays in javascript can be used to store _____.",
+    question: "In an array object, what is the key of the first value?",
     answers: {
-      a: "1. numbers and strings",
-      b: "2. other arrays",
-      c: "3. booleans",
-      d: "4. all of the above"
+      a: "1. 0",
+      b: "2. $",
+      c: "3. 1",
+      d: "4. 100"
     },
-    correctAnswer: "4. all of the above"
+    correctAnswer: "1. 0"
   },
   {
-    question: "String values must be enclosed within _____ when being assigned to variables.",
+    question: "What keyword is used to begin a conditional statement?",
     answers: {
-      a: "1. commas",
-      b: "2. curly brackets",
-      c: "3. quotes",
-      d: "4. parentheses"
+      a: "1. when",
+      b: "2. how",
+      c: "3. if",
+      d: "4. condition"
     },
-    correctAnswer: "3. quotes"
+    correctAnswer: "3. if"
   },
   {
-    question: "A very useful tool during development and debugging for printing content to the debugger is:",
+    question: "Functions in javascript are always ...",
     answers: {
-      a: "1. JavaScript",
-      b: "2. terminal / bash",
-      c: "3. for loops",
-      d: "4. console.log"
+      a: "1. in the global scope",
+      b: "2. loops",
+      c: "3. objects",
+      d: "4. operators"
     },
-    correctAnswer: "4. console.log"
+    correctAnswer: "3. objects"
   }
 ];

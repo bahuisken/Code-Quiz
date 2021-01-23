@@ -13,6 +13,7 @@ var quizAnswerC = document.querySelector("#answer-c");
 var quizAnswerD = document.querySelector("#answer-d");
 var quizAnswer = document.querySelectorAll(".answer");
 var questionResult = document.querySelector("#question-result");
+var incorrectAnswers = 0;
 var quizEnd = document.querySelector("#quiz-end");
 var timeFinal = document.querySelector("#final-time");
 var initialsText = document.querySelector("#initials-text");
@@ -51,6 +52,10 @@ function startTimer() {
 
         if (currentQuestion === quizQuestions.length || secondsLeft === 0) {
             console.log("GameOver");
+            if (incorrectAnswers === 5) {
+                secondsLeft = 0;
+                timeEl.textContent = "0";
+            }
             clearInterval(timerInterval);
             gameOver();
         }
@@ -67,8 +72,9 @@ var answerClick = function () {
         nextQuestion();
     } else {
         secondsLeft -= 10;
-        console.log("incorrect");
         questionResult.textContent = "❌"
+        incorrectAnswers++
+        console.log(incorrectAnswers);
         nextQuestion();
     }
 };
@@ -95,6 +101,7 @@ function gameOver() {
     quizContainer.setAttribute("style", "display:none;");
     quizEnd.setAttribute("style", "display:block;");
     timeFinal.textContent = secondsLeft;
+
 }
 
 submitInitials.addEventListener("click", function () {

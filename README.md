@@ -1,4 +1,4 @@
-# Code-Quiz
+# Code Quiz
 
 For this assignment, I was tasked with to building a timed coding quiz with multiple-choice questions. This app runs in the browser and features dynamically updated HTML and CSS powered by JavaScript code. The interface is clean, polished, and responsive.  
 
